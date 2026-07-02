@@ -1,0 +1,363 @@
+/* ════════════════════════════════════════════════
+   FUTURESTEPS SERVICES — MAIN SCRIPT
+   ════════════════════════════════════════════════ */
+
+/* ── Translations ── */
+const translations = {
+  vi: {
+    "nav.services": "Dịch Vụ",
+    "nav.gallery": "Hình Ảnh",
+    "nav.about": "Giới Thiệu",
+    "nav.process": "Quy Trình",
+    "nav.reviews": "Cập Nhật",
+    "nav.cta": "Nhận Tư Vấn Miễn Phí",
+    "hero.tag": "Du Lịch &bull; Visa &bull; Du Học",
+    "hero.title": 'Mở Cánh Cửa<br>Tương Lai <em>Của Bạn</em>',
+    "hero.subtitle": "Chuyên gia hàng đầu về visa, du học và du lịch quốc tế tại Dallas, TX. Chúng tôi đồng hành cùng bạn từ hồ sơ đến ngày khởi hành — nhanh chóng, chính xác và tận tâm.",
+    "hero.btn1": 'Tư Vấn Miễn Phí Ngay <i class="fa-solid fa-arrow-right"></i>',
+    "hero.btn2": "Xem Dịch Vụ",
+    "svc.tag": "Giải Pháp Toàn Diện",
+    "svc.title": 'Dịch Vụ Thiết Kế Riêng<br>Cho <em>Mục Tiêu Của Bạn</em>',
+    "svc.desc": "Mỗi khách hàng có một câu chuyện khác nhau. Dù bạn cần xin visa, du học hay lên kế hoạch chuyến đi, chúng tôi đều có giải pháp phù hợp nhất.",
+    "svc.visa.title": "Dịch Vụ Visa",
+    "svc.visa.desc": "Xin visa du lịch, du học, lao động và định cư với tỷ lệ thành công cao. Hồ sơ được chuẩn bị kỹ lưỡng, luyện phỏng vấn bài bản và theo sát đến khi có kết quả.",
+    "svc.visa.l1": "Đánh giá hồ sơ & tư vấn chiến lược",
+    "svc.visa.l2": "Chuẩn bị & nộp hồ sơ chuyên nghiệp",
+    "svc.visa.l3": "Luyện phỏng vấn 1-1 với chuyên gia",
+    "svc.visa.l4": "Cập nhật tình trạng hồ sơ liên tục",
+    "svc.study.badge": "Được Chọn Nhiều Nhất",
+    "svc.study.title": "Tư Vấn Du Học",
+    "svc.study.desc": "Hỗ trợ toàn diện từ chọn trường, viết hồ sơ, xin học bổng đến chuẩn bị hành trang trước khi lên đường. Con bạn xứng đáng có nền giáo dục tốt nhất.",
+    "svc.study.l1": "Định hướng & chọn trường phù hợp năng lực",
+    "svc.study.l2": "Hoàn thiện hồ sơ & bài luận ấn tượng",
+    "svc.study.l3": "Tìm kiếm học bổng & hỗ trợ tài chính",
+    "svc.study.l4": "Xin visa du học trọn gói",
+    "svc.study.l5": "Chuẩn bị hành trang trước khi xuất cảnh",
+    "svc.travel.title": "Thiết Kế Chuyến Đi",
+    "svc.travel.desc": "Lịch trình được thiết kế riêng theo sở thích, đặt vé & khách sạn giá tốt, tư vấn bảo hiểm và hỗ trợ 24/7 trong suốt chuyến đi.",
+    "svc.travel.l1": "Lịch trình cá nhân hóa theo yêu cầu",
+    "svc.travel.l2": "Đặt vé máy bay & khách sạn uy tín",
+    "svc.travel.l3": "Tư vấn bảo hiểm du lịch toàn diện",
+    "svc.travel.l4": "Đón tiễn sân bay & hỗ trợ hậu cần",
+    "gal.tag": "Điểm Đến & Trường Học",
+    "gal.title": 'Khám Phá Nơi Chúng Tôi<br><em>Đưa Bạn Đến</em>',
+    "gal.desc": "Từ các trường đại học danh tiếng hàng đầu Hoa Kỳ đến những vùng đất tuyệt đẹp — cơ hội đang chờ bạn.",
+    "gal.schools": "Trường Đại Học & Phổ Thông Uy Tín",
+    "gal.cc": "Cao Đẳng Cộng Đồng<small>Học Phí Hợp Lý — Cơ Hội Chuyển Tiếp</small>",
+    "gal.hs": "Trường Phổ Thông<small>Chương Trình Trao Đổi Quốc Tế K-12</small>",
+    "gal.dc": "Dallas College<small>Dallas, TX — Cao Đẳng Cộng Đồng Uy Tín</small>",
+    "gal.travel": "Điểm Du Lịch Hấp Dẫn",
+    "gal.rocky": "Dãy Núi Rocky<small>Colorado</small>",
+    "gal.yellow": "Vườn Quốc Gia Yellowstone<small>Wyoming / Montana</small>",
+    "gal.zion": "Vườn Quốc Gia Zion<small>Utah</small>",
+    "gal.beach": "Nghỉ Dưỡng Biển<small>Bãi Biển Nhiệt Đới Tuyệt Đẹp</small>",
+    "gal.pnw": "Tây Bắc Thái Bình Dương<small>Oregon / Washington</small>",
+    "gal.falls": "Thác Nước Hùng Vĩ<small>Khám Phá Thiên Nhiên</small>",
+    "updates.tag": "Cập Nhật Di Trú",
+    "updates.title": 'Bản Tin Visa & <em>Tin Tức Mới Nhất</em>',
+    "updates.desc": "Cập nhật lịch visa mới nhất và các thay đổi quan trọng về chính sách di trú Hoa Kỳ.",
+    "vb.title": "Bản Tin Visa — Tháng 5/2026",
+    "vb.updated": "Cập nhật hàng tháng &bull; Nguồn: Bộ Ngoại Giao Hoa Kỳ",
+    "vb.eb.title": '<i class="fa-solid fa-briefcase"></i> Diện Lao Động (Ngày Hành Động Cuối)',
+    "vb.cat": "Diện",
+    "vb.all": "Các Nước Khác",
+    "vb.china": "Trung Quốc",
+    "vb.india": "Ấn Độ",
+    "vb.current": "Hiện hành",
+    "vb.current2": "Hiện hành",
+    "vb.current3": "Hiện hành",
+    "vb.current4": "Hiện hành",
+    "vb.current5": "Hiện hành",
+    "vb.varies": "Khác nhau theo quốc gia",
+    "vb.varies2": "Khác nhau theo quốc gia",
+    "vb.fb.title": '<i class="fa-solid fa-users"></i> Diện Gia Đình Bảo Lãnh (Ngày Hành Động Cuối)',
+    "vb.cat2": "Diện",
+    "vb.all2": "Các Nước Khác",
+    "vb.vn": "Việt Nam",
+    "vb.desc2": "Mô Tả",
+    "vb.f1.desc": "Con trưởng thành chưa kết hôn của công dân Mỹ",
+    "vb.current6": "Hiện hành",
+    "vb.current7": "Hiện hành",
+    "vb.f2a.desc": "Vợ/chồng và con dưới 21 của thường trú nhân",
+    "vb.f2b.desc": "Con trưởng thành chưa kết hôn của thường trú nhân",
+    "vb.f3.desc": "Con đã kết hôn của công dân Mỹ",
+    "vb.f4.desc": "Anh chị em của công dân Mỹ trưởng thành",
+    "vb.source": "Xem bản tin chính thức tại travel.state.gov",
+    "news.title": "Tin Tức Di Trú Mới Nhất",
+    "news.n1.tag": "Chậm Xử Lý",
+    "news.n1.title": "USCIS Kiểm Tra Lại Vân Tay Tất Cả Hồ Sơ Đang Chờ — Dự Kiến Chậm Trễ",
+    "news.n1.desc": "USCIS đang kiểm tra lại vân tay trên hầu hết tất cả hồ sơ di trú nộp trước 27/4/2026 bằng thuật toán FBI nâng cấp. Thời gian xử lý I-485 kéo dài từ 2–3 tháng lên 4–6 tháng. Dự kiến giải quyết tồn đọng trong 90 ngày.",
+    "news.n2.tag": "Visa Du Học",
+    "news.n2.title": "Mỹ Dự Kiến Xóa Bỏ \"Duration of Status\" Cho Visa F, J và I",
+    "news.n2.desc": "DHS đề xuất thay thế \"duration of status\" cho visa F, J và I bằng thời hạn nhập cảnh cố định tối đa 4 năm. Nếu được thông qua, quy định này sẽ giới hạn thời gian du học sinh có thể học tại Mỹ, dự kiến có hiệu lực từ tháng 9/2026.",
+    "news.n3.tag": "Cập Nhật Sàng Lọc",
+    "news.n3.title": "Chiến Dịch PARRIS — Tăng Cường An Ninh, Gỡ Bỏ Tạm Giữ Một Số Diện",
+    "news.n3.desc": "USCIS chính thức hóa \"Operation PARRIS\" — kiểm tra sinh trắc học, mạng xã hội và tài chính đồng bộ giữa DHS và FBI. Đã gỡ bỏ tạm giữ cho đơn do công dân Mỹ bảo lãnh, nhận con nuôi quốc tế, và bác sĩ có giấy phép. Thời hạn EAD giảm xuống 1 năm.",
+    "about.badge": "LLC Chính Thức<br>Có Giấy Phép & Bảo Hiểm",
+    "about.tag": "Tại Sao Chọn Chúng Tôi",
+    "about.title": 'Đồng Hành Cùng Bạn<br>Trên Mọi <em>Hành Trình</em>',
+    "about.p1": "FutureSteps Services ra đời với sứ mệnh rõ ràng: giúp gia đình Việt Nam tiếp cận giáo dục quốc tế, cơ hội việc làm và trải nghiệm du lịch một cách dễ dàng và an tâm nhất. Chúng tôi thấu hiểu những lo lắng khi làm hồ sơ visa, chọn trường cho con hay lên kế hoạch chuyến đi quan trọng.",
+    "about.p2": "Là công ty LLC có giấy phép tại Texas, chúng tôi tự hào mang đến dịch vụ tư vấn 1-1 tận tâm — điều mà các công ty lớn không thể có được. Chúng tôi sẵn sàng gặp bạn tại văn phòng, nhà riêng, hoặc bất cứ đâu thuận tiện cho bạn.",
+    "about.f1.title": "Tư Vấn Tận Tâm",
+    "about.f1.desc": "Mỗi khách hàng được tư vấn riêng, phù hợp hoàn cảnh và mục tiêu cụ thể",
+    "about.f2.title": "Linh Hoạt & Tiện Lợi",
+    "about.f2.desc": "Hẹn gặp tại nhà, văn phòng hoặc online — theo lịch trình của bạn",
+    "about.f3.title": "Chi Phí Rõ Ràng",
+    "about.f3.desc": "Báo giá minh bạch từ đầu — không phát sinh, không phí ẩn",
+    "proc.tag": "Quy Trình Làm Việc",
+    "proc.title": 'Chỉ 4 Bước <em>Đơn Giản</em>',
+    "proc.desc": "Từ cuộc gọi đầu tiên đến ngày khởi hành — mọi thứ đều được chúng tôi lo liệu chu đáo.",
+    "proc.s1.title": "Tư Vấn Miễn Phí",
+    "proc.s1.desc": "Chia sẻ mong muốn của bạn — chúng tôi sẽ đánh giá tình hình và đề xuất phương án tối ưu nhất. Hoàn toàn miễn phí, không ràng buộc.",
+    "proc.s2.title": "Chuẩn Bị Hồ Sơ",
+    "proc.s2.desc": "Đội ngũ chuyên gia thu thập, kiểm tra và hoàn thiện toàn bộ giấy tờ. Mọi chi tiết đều được rà soát kỹ lưỡng trước khi nộp.",
+    "proc.s3.title": "Nộp Hồ Sơ & Theo Sát",
+    "proc.s3.desc": "Chúng tôi thay mặt bạn nộp hồ sơ và theo dõi sát sao tiến trình, cập nhật kết quả nhanh chóng qua điện thoại hoặc Zalo.",
+    "proc.s4.title": "Chúc Mừng — Lên Đường!",
+    "proc.s4.desc": "Visa được duyệt, vé máy bay đã đặt, mọi thứ sẵn sàng! Chúng tôi hỗ trợ đến phút cuối — từ đón sân bay đến hướng dẫn ban đầu tại nơi đến.",
+    "cta.title": "Bạn Đã Sẵn Sàng Cho Hành Trình Mới?",
+    "cta.desc": "Đặt lịch tư vấn miễn phí ngay hôm nay — không ràng buộc, không áp lực. Chỉ cần một cuộc gọi, chúng tôi sẽ giúp bạn tìm ra hướng đi tốt nhất.",
+    "cta.btn": 'Đặt Lịch Tư Vấn Ngay <i class="fa-solid fa-arrow-right"></i>',
+    "contact.tag": "Liên Hệ Ngay",
+    "contact.title": 'Hãy Để Chúng Tôi<br>Giúp Bạn <em>Bắt Đầu</em>',
+    "contact.desc": "Bạn có câu hỏi hoặc muốn tìm hiểu thêm? Hãy liên hệ — chúng tôi luôn sẵn lòng hỗ trợ và phản hồi trong vòng 24 giờ.",
+    "contact.phone": "Hotline Tư Vấn",
+    "contact.office": "Văn Phòng Chính",
+    "contact.hours": "Giờ Làm Việc",
+    "contact.hours.val": "7:00 sáng – 12:00 trưa (Giờ Việt Nam, GMT+7)",
+    "form.heading": "Gửi Yêu Cầu Tư Vấn",
+    "form.name": "Họ Và Tên",
+    "form.name.ph": "Nhập họ và tên của bạn",
+    "form.phone": "Số Điện Thoại",
+    "form.email.ph": "email@example.com",
+    "form.service": "Dịch Vụ Bạn Cần",
+    "form.service.ph": "— Chọn dịch vụ —",
+    "form.service.visa": "Dịch Vụ Visa",
+    "form.service.study": "Tư Vấn Du Học",
+    "form.service.travel": "Thiết Kế Chuyến Đi",
+    "form.service.other": "Dịch Vụ Khác / Chưa Xác Định",
+    "form.message": 'Nội Dung Yêu Cầu <span class="word-limit" id="wordCount">(0 / 350 từ)</span>',
+    "form.message.ph": "Vui lòng mô tả nhu cầu của bạn — chúng tôi sẽ liên hệ tư vấn chi tiết...",
+    "form.submit": 'Gửi Yêu Cầu <i class="fa-solid fa-paper-plane"></i>',
+    "form.note": "Chúng tôi cam kết phản hồi trong 24 giờ. Mọi thông tin được bảo mật tuyệt đối.",
+    "form.success.title": "Gửi Thành Công!",
+    "form.success.desc": "Cảm ơn bạn đã tin tưởng FutureSteps. Chúng tôi sẽ liên hệ lại trong vòng 24 giờ để tư vấn chi tiết.",
+    "form.success.another": 'Gửi Yêu Cầu Khác <i class="fa-solid fa-rotate-right"></i>',
+    "footer.desc": "FutureSteps Services — Đơn vị tư vấn du lịch, visa và du học uy tín tại Dallas, TX. Đối tác đáng tin cậy đồng hành cùng bạn trên mọi hành trình quốc tế.",
+    "footer.services": "Dịch Vụ",
+    "footer.company": "Về FutureSteps",
+    "footer.contactinfo": "Liên Hệ",
+    "footer.contact": "Liên Hệ",
+  }
+};
+
+const enCache = {};
+let currentLang = "en";
+
+function switchLanguage(lang) {
+  const flag = document.getElementById("langFlag");
+  const label = document.getElementById("langLabel");
+
+  if (lang === "vi") {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (!enCache[key]) enCache[key] = el.innerHTML;
+      if (translations.vi[key]) el.innerHTML = translations.vi[key];
+    });
+    document.querySelectorAll("[data-i18n-ph]").forEach(el => {
+      const key = el.getAttribute("data-i18n-ph");
+      if (!enCache["ph:" + key]) enCache["ph:" + key] = el.placeholder;
+      if (translations.vi[key]) el.placeholder = translations.vi[key];
+    });
+    flag.textContent = "🇺🇸";
+    label.textContent = "English";
+    document.documentElement.lang = "vi";
+    currentLang = "vi";
+  } else {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (enCache[key]) el.innerHTML = enCache[key];
+    });
+    document.querySelectorAll("[data-i18n-ph]").forEach(el => {
+      const key = el.getAttribute("data-i18n-ph");
+      if (enCache["ph:" + key]) el.placeholder = enCache["ph:" + key];
+    });
+    flag.textContent = "🇻🇳";
+    label.textContent = "Tiếng Việt";
+    document.documentElement.lang = "en";
+    currentLang = "en";
+  }
+  updateWordCount();
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ── Language toggle ── */
+  document.getElementById("langToggle").addEventListener("click", () => {
+    switchLanguage(currentLang === "en" ? "vi" : "en");
+  });
+
+  /* ── Word count for message textarea ── */
+  const msgTextarea = document.getElementById("message");
+  const wordCountEl = document.getElementById("wordCount");
+  const WORD_LIMIT = 350;
+
+  window.updateWordCount = function() {
+    if (!msgTextarea || !wordCountEl) return;
+    const text = msgTextarea.value.trim();
+    const count = text === "" ? 0 : text.split(/\s+/).length;
+    const unit = currentLang === "vi" ? "từ" : "words";
+    wordCountEl.textContent = `(${count} / ${WORD_LIMIT} ${unit})`;
+    wordCountEl.classList.toggle("over", count > WORD_LIMIT);
+  };
+
+  if (msgTextarea) {
+    msgTextarea.addEventListener("input", () => {
+      const text = msgTextarea.value.trim();
+      const count = text === "" ? 0 : text.split(/\s+/).length;
+      if (count > WORD_LIMIT) {
+        const words = text.split(/\s+/).slice(0, WORD_LIMIT);
+        msgTextarea.value = words.join(" ");
+      }
+      updateWordCount();
+    });
+  }
+
+  /* ── Navbar scroll effect ── */
+  const nav = document.getElementById("nav");
+  const handleScroll = () => {
+    nav.classList.toggle("nav--scrolled", window.scrollY > 60);
+  };
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  /* ── Mobile hamburger menu ── */
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    navLinks.classList.toggle("open");
+    document.body.style.overflow = navLinks.classList.contains("open") ? "hidden" : "";
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("open");
+      navLinks.classList.remove("open");
+      document.body.style.overflow = "";
+    });
+  });
+
+  /* ── Scroll-triggered animations ── */
+  const animatedEls = document.querySelectorAll("[data-animate]");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const delay = parseInt(entry.target.dataset.delay || "0", 10);
+        setTimeout(() => entry.target.classList.add("visible"), delay);
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+  );
+  animatedEls.forEach(el => observer.observe(el));
+
+  /* ── Counting animation for hero stats ── */
+  const statNums = document.querySelectorAll("[data-count]");
+  const countObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        const duration = 2000;
+        const start = performance.now();
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(target * eased);
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        countObserver.unobserve(el);
+      });
+    },
+    { threshold: 0.5 }
+  );
+  statNums.forEach(el => countObserver.observe(el));
+
+  /* ── Active nav link highlighting ── */
+  const sections = document.querySelectorAll("section[id]");
+  const navAnchors = navLinks.querySelectorAll("a[href^='#']");
+  const highlightNav = () => {
+    let current = "";
+    sections.forEach(section => {
+      const top = section.offsetTop - 120;
+      if (window.scrollY >= top) current = section.id;
+    });
+    navAnchors.forEach(a => {
+      a.classList.toggle("active", a.getAttribute("href") === `#${current}`);
+    });
+  };
+  window.addEventListener("scroll", highlightNav, { passive: true });
+
+  /* ── Contact form — Netlify Forms submission ── */
+  const form = document.getElementById("contactForm");
+  const success = document.getElementById("formSuccess");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const btn = form.querySelector("button[type='submit']");
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    btn.disabled = true;
+
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => {
+      form.hidden = true;
+      success.hidden = false;
+      success.style.display = "flex";
+    })
+    .catch(() => {
+      btn.innerHTML = originalHTML;
+      btn.disabled = false;
+      alert("Something went wrong. Please try again or email us directly.");
+    });
+  });
+
+  /* ── Send Another Message button ── */
+  document.getElementById("sendAnother").addEventListener("click", () => {
+    form.reset();
+    form.hidden = false;
+    success.hidden = true;
+    success.style.display = "none";
+    const btn = form.querySelector("button[type='submit']");
+    const submitKey = currentLang === "vi" ? translations.vi["form.submit"] : 'Send Message <i class="fa-solid fa-paper-plane"></i>';
+    btn.innerHTML = submitKey;
+    btn.disabled = false;
+    updateWordCount();
+  });
+
+  /* ── Smooth scroll for all anchor links ── */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", (e) => {
+      const targetId = anchor.getAttribute("href");
+      if (targetId === "#") return;
+      const target = document.querySelector(targetId);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+});

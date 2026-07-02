@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureSteps Services — Travel, Visa & Study Abroad</title>
+  <meta name="description" content="FutureSteps Services — Expert visa consulting, travel planning, and study abroad advisory. We guide you every step of the way to your international journey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <svg class="nav__logo-svg" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="42" height="42" rx="12" fill="url(#logoGrad)"/>
+          <path d="M13 28C13 28 15.5 22 21 22C26.5 22 29 28 29 28" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 24C10 24 13.5 16 21 16C28.5 16 32 24 32 24" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity=".6"/>
+          <path d="M7 20C7 20 12 10 21 10C30 10 35 20 35 20" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity=".3"/>
+          <circle cx="21" cy="28" r="2.5" fill="white"/>
+          <circle cx="14" cy="17" r="1.8" fill="white" opacity=".7"/>
+          <circle cx="28" cy="17" r="1.8" fill="white" opacity=".7"/>
+          <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="42" y2="42"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0891b2"/></linearGradient></defs>
+        </svg>
+        <span class="nav__logo-text">Future<strong>Steps</strong></span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#process" data-i18n="nav.process">How It Works</a></li>
+        <li><a href="#updates" data-i18n="nav.reviews">Updates</a></li>
+        <li><a href="#contact" class="nav__cta" data-i18n="nav.cta">Free Consultation</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-toggle__flag" id="langFlag">🇻🇳</span>
+        <span class="lang-toggle__label" id="langLabel">Tiếng Việt</span>
+      </button>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__gradient"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__tag" data-animate="fade-up" data-i18n="hero.tag">Travel &bull; Visa &bull; Study Abroad</p>
+      <h1 class="hero__title" data-animate="fade-up" data-delay="100" data-i18n="hero.title">
+        Your Journey<br>Starts <em>Here</em>
+      </h1>
+      <p class="hero__subtitle" data-animate="fade-up" data-delay="200" data-i18n="hero.subtitle">
+        Expert guidance for visa applications, international travel planning, and study abroad programs. We turn complex paperwork into smooth departures.
+      </p>
+      <div class="hero__actions" data-animate="fade-up" data-delay="300">
+        <a href="#contact" class="btn btn--primary" data-i18n="hero.btn1">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#services" class="btn btn--outline" data-i18n="hero.btn2">Our Services</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <a href="#services"><i class="fa-solid fa-chevron-down"></i></a>
+    </div>
+  </header>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-tag" data-i18n="svc.tag">What We Do</p>
+        <h2 class="section-title" data-i18n="svc.title">Services Tailored to <em>Your Goals</em></h2>
+        <p class="section-desc" data-i18n="svc.desc">Whether you're planning a vacation, applying for a visa, or pursuing education abroad, we provide personalized support at every step.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card" data-animate="fade-up" data-delay="0">
+          <div class="service-card__icon"><i class="fa-solid fa-passport"></i></div>
+          <h3 class="service-card__title" data-i18n="svc.visa.title">Visa Consulting</h3>
+          <p class="service-card__desc" data-i18n="svc.visa.desc">Tourist, student, work, and immigrant visa applications. We handle document preparation, interview coaching, and embassy coordination.</p>
+          <ul class="service-card__list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.visa.l1">Document review & preparation</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.visa.l2">Application filing assistance</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.visa.l3">Interview preparation</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.visa.l4">Status tracking & follow-up</span></li>
+          </ul>
+        </div>
+        <div class="service-card service-card--featured" data-animate="fade-up" data-delay="100">
+          <div class="service-card__badge" data-i18n="svc.study.badge">Most Popular</div>
+          <div class="service-card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3 class="service-card__title" data-i18n="svc.study.title">Study Abroad</h3>
+          <p class="service-card__desc" data-i18n="svc.study.desc">University selection, application support, scholarship guidance, and pre-departure orientation for students pursuing international education.</p>
+          <ul class="service-card__list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.study.l1">University matching & selection</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.study.l2">Application & essay review</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.study.l3">Scholarship & financial aid</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.study.l4">Student visa processing</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.study.l5">Pre-departure orientation</span></li>
+          </ul>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="200">
+          <div class="service-card__icon"><i class="fa-solid fa-plane-departure"></i></div>
+          <h3 class="service-card__title" data-i18n="svc.travel.title">Travel Planning</h3>
+          <p class="service-card__desc" data-i18n="svc.travel.desc">Custom itineraries, flight & hotel booking assistance, travel insurance guidance, and on-trip support for worry-free travel.</p>
+          <ul class="service-card__list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.travel.l1">Custom itinerary design</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.travel.l2">Flight & hotel coordination</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.travel.l3">Travel insurance guidance</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="svc.travel.l4">Airport pickup & logistics</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GALLERY ═══ -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-tag" data-i18n="gal.tag">Destinations & Schools</p>
+        <h2 class="section-title" data-i18n="gal.title">Where We Can <em>Take You</em></h2>
+        <p class="section-desc" data-i18n="gal.desc">From top US universities to breathtaking travel destinations — explore the possibilities.</p>
+      </div>
+      <h3 class="gallery__category" data-animate="fade-up"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="gal.schools">Universities & Schools</span></h3>
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--wide" data-animate="fade-up" data-delay="0"><img src="https://images.unsplash.com/photo-1568792923760-d70635a89fdc?w=800&h=500&fit=crop" alt="Harvard University" loading="lazy"><div class="gallery__overlay"><span>Harvard University<small>Cambridge, MA</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=500&h=400&fit=crop" alt="UCLA Campus" loading="lazy"><div class="gallery__overlay"><span>UCLA<small>Los Angeles, CA</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="100"><img src="https://images.unsplash.com/photo-1562774053-701939374585?w=500&h=400&fit=crop" alt="Columbia University" loading="lazy"><div class="gallery__overlay"><span>Columbia University<small>New York, NY</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="0"><img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=500&h=400&fit=crop" alt="University of Dallas" loading="lazy"><div class="gallery__overlay"><span>University of Dallas<small>Irving, TX</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=500&h=400&fit=crop" alt="UT Austin" loading="lazy"><div class="gallery__overlay"><span>UT Austin<small>Austin, TX</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="100"><img src="https://images.unsplash.com/photo-1580537659466-0a9bfa916a54?w=500&h=400&fit=crop" alt="MIT" loading="lazy"><div class="gallery__overlay"><span>MIT<small>Cambridge, MA</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="150"><img src="https://images.unsplash.com/photo-1592280771190-3e2e4d571952?w=500&h=400&fit=crop" alt="Community College" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.cc">Community Colleges<small>Affordable Pathway Programs</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="0"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&h=400&fit=crop" alt="High School" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.hs">High Schools<small>K-12 Exchange Programs</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=500&h=400&fit=crop" alt="Stanford University" loading="lazy"><div class="gallery__overlay"><span>Stanford University<small>Stanford, CA</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="100"><img src="https://images.unsplash.com/photo-1559135197-8a45ea74d367?w=500&h=400&fit=crop" alt="Dallas College" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.dc">Dallas College<small>Dallas, TX — Community College</small></span></div></div>
+      </div>
+      <h3 class="gallery__category" data-animate="fade-up"><i class="fa-solid fa-mountain-sun"></i> <span data-i18n="gal.travel">Travel Destinations</span></h3>
+      <div class="gallery__grid">
+        <div class="gallery__item" data-animate="fade-up" data-delay="0"><img src="https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=500&h=400&fit=crop" alt="Grand Canyon" loading="lazy"><div class="gallery__overlay"><span>Grand Canyon<small>Arizona</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=500&h=400&fit=crop" alt="Antelope Canyon" loading="lazy"><div class="gallery__overlay"><span>Antelope Canyon<small>Arizona</small></span></div></div>
+        <div class="gallery__item gallery__item--wide" data-animate="fade-up" data-delay="100"><img src="https://images.unsplash.com/photo-1494243762909-b498c7e440a9?w=800&h=500&fit=crop" alt="Lake Tahoe" loading="lazy"><div class="gallery__overlay"><span>Lake Tahoe<small>California / Nevada</small></span></div></div>
+        <div class="gallery__item gallery__item--wide" data-animate="fade-up" data-delay="0"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop" alt="Rocky Mountains" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.rocky">Rocky Mountains<small>Colorado</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?w=500&h=400&fit=crop" alt="Yellowstone" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.yellow">Yellowstone<small>Wyoming / Montana</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="100"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500&h=400&fit=crop" alt="Yosemite" loading="lazy"><div class="gallery__overlay"><span>Yosemite<small>California</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="0"><img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=500&h=400&fit=crop" alt="New York City" loading="lazy"><div class="gallery__overlay"><span>New York City<small>New York</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500&h=400&fit=crop" alt="San Francisco" loading="lazy"><div class="gallery__overlay"><span>San Francisco<small>California</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="100"><img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=500&h=400&fit=crop" alt="Sedona" loading="lazy"><div class="gallery__overlay"><span>Sedona<small>Arizona</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="150"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=500&h=400&fit=crop" alt="Zion" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.zion">Zion National Park<small>Utah</small></span></div></div>
+        <div class="gallery__item gallery__item--wide" data-animate="fade-up" data-delay="0"><img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&h=500&fit=crop" alt="Beach" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.beach">Beach Getaways<small>Tropical Destinations</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=400&fit=crop" alt="Pacific Northwest" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.pnw">Pacific Northwest<small>Oregon / Washington</small></span></div></div>
+        <div class="gallery__item" data-animate="fade-up" data-delay="100"><img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=500&h=400&fit=crop" alt="Waterfall" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.falls">Hidden Waterfalls<small>Nature Escapes</small></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visual" data-animate="fade-right">
+          <div class="about__image-stack">
+            <div class="about__img about__img--1"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop" alt="Travel planning" loading="lazy"></div>
+            <div class="about__img about__img--2"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop" alt="Study abroad students" loading="lazy"></div>
+            <div class="about__float-card"><i class="fa-solid fa-shield-halved"></i><span data-i18n="about.badge">Licensed &<br>Insured LLC</span></div>
+          </div>
+        </div>
+        <div class="about__content" data-animate="fade-left">
+          <p class="section-tag" data-i18n="about.tag">About Us</p>
+          <h2 class="section-title" data-i18n="about.title">Guiding Dreams<br>Across <em>Borders</em></h2>
+          <p class="about__text" data-i18n="about.p1">FutureSteps Services was founded with a simple mission: make international travel, education, and immigration accessible to everyone. We understand the stress of navigating visa requirements, choosing the right university abroad, or planning a complex international trip.</p>
+          <p class="about__text" data-i18n="about.p2">As a locally-owned LLC, we offer personalized, one-on-one service that big agencies can't match. We meet you where you are — whether that's at our office, your home, or your favorite coffee shop.</p>
+          <div class="about__features">
+            <div class="about__feature"><div class="about__feature-icon"><i class="fa-solid fa-handshake"></i></div><div><h4 data-i18n="about.f1.title">Personal Touch</h4><p data-i18n="about.f1.desc">One-on-one consultations tailored to your unique situation</p></div></div>
+            <div class="about__feature"><div class="about__feature-icon"><i class="fa-solid fa-car"></i></div><div><h4 data-i18n="about.f2.title">We Come to You</h4><p data-i18n="about.f2.desc">In-person meetings at your convenience — home, office, or campus</p></div></div>
+            <div class="about__feature"><div class="about__feature-icon"><i class="fa-solid fa-dollar-sign"></i></div><div><h4 data-i18n="about.f3.title">Transparent Pricing</h4><p data-i18n="about.f3.desc">No hidden fees — you know exactly what you're paying for</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS ═══ -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-tag" data-i18n="proc.tag">How It Works</p>
+        <h2 class="section-title" data-i18n="proc.title">Four Simple <em>Steps</em></h2>
+        <p class="section-desc" data-i18n="proc.desc">From first call to final destination — here's how we make your journey seamless.</p>
+      </div>
+      <div class="process__timeline">
+        <div class="process__line"></div>
+        <div class="process__step" data-animate="fade-up" data-delay="0"><div class="process__number">01</div><div class="process__card"><div class="process__icon"><i class="fa-solid fa-phone"></i></div><h3 data-i18n="proc.s1.title">Free Consultation</h3><p data-i18n="proc.s1.desc">Tell us about your goals. We'll assess your situation and recommend the best path forward — no obligation.</p></div></div>
+        <div class="process__step" data-animate="fade-up" data-delay="100"><div class="process__number">02</div><div class="process__card"><div class="process__icon"><i class="fa-solid fa-file-pen"></i></div><h3 data-i18n="proc.s2.title">Document Preparation</h3><p data-i18n="proc.s2.desc">We gather, review, and organize all required documents. Every form is double-checked for accuracy before submission.</p></div></div>
+        <div class="process__step" data-animate="fade-up" data-delay="200"><div class="process__number">03</div><div class="process__card"><div class="process__icon"><i class="fa-solid fa-paper-plane"></i></div><h3 data-i18n="proc.s3.title">Submission & Tracking</h3><p data-i18n="proc.s3.desc">We submit your application and monitor its progress, keeping you informed at every stage with real-time updates.</p></div></div>
+        <div class="process__step" data-animate="fade-up" data-delay="300"><div class="process__number">04</div><div class="process__card"><div class="process__icon"><i class="fa-solid fa-champagne-glasses"></i></div><h3 data-i18n="proc.s4.title">Bon Voyage!</h3><p data-i18n="proc.s4.desc">Visa approved, flights booked, bags packed. We handle last-mile logistics including airport pickup and orientation.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VISA BULLETIN & IMMIGRATION NEWS ═══ -->
+  <section class="updates" id="updates">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-tag" data-i18n="updates.tag">Immigration Updates</p>
+        <h2 class="section-title" data-i18n="updates.title">Visa Bulletin & <em>Breaking News</em></h2>
+        <p class="section-desc" data-i18n="updates.desc">Stay informed with the latest visa bulletin dates and important immigration policy changes.</p>
+      </div>
+
+      <!-- VISA BULLETIN -->
+      <div class="bulletin" data-animate="fade-up">
+        <div class="bulletin__header">
+          <div class="bulletin__badge"><i class="fa-solid fa-calendar-check"></i></div>
+          <div>
+            <h3 data-i18n="vb.title">Visa Bulletin — May 2026</h3>
+            <p class="bulletin__updated" data-i18n="vb.updated">Updated monthly &bull; Source: U.S. Department of State</p>
+          </div>
+        </div>
+        <div class="bulletin__tables">
+          <div class="bulletin__table-wrap">
+            <h4 data-i18n="vb.eb.title"><i class="fa-solid fa-briefcase"></i> Employment-Based (Final Action Dates)</h4>
+            <table class="bulletin__table">
+              <thead>
+                <tr>
+                  <th data-i18n="vb.cat">Category</th>
+                  <th data-i18n="vb.all">All Other</th>
+                  <th data-i18n="vb.china">China</th>
+                  <th data-i18n="vb.india">India</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>EB-1</td><td class="current">Current</td><td>01 Apr 2023</td><td>01 Apr 2023</td></tr>
+                <tr><td>EB-2</td><td class="current">Current</td><td>01 Sep 2021</td><td>15 Jul 2014</td></tr>
+                <tr><td>EB-3</td><td>01 Jun 2024</td><td>15 Jun 2021</td><td>15 Nov 2013</td></tr>
+                <tr><td>EB-4</td><td>15 Jul 2022</td><td colspan="2">15 Jul 2022</td></tr>
+                <tr><td>EB-5</td><td class="current">Current</td><td>22 Sep 2016</td><td>01 May 2022</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bulletin__table-wrap">
+            <h4 data-i18n="vb.fb.title"><i class="fa-solid fa-users"></i> Family-Sponsored (Final Action Dates)</h4>
+            <table class="bulletin__table">
+              <thead>
+                <tr>
+                  <th data-i18n="vb.cat2">Category</th>
+                  <th data-i18n="vb.all2">All Other</th>
+                  <th data-i18n="vb.vn">Vietnam</th>
+                  <th data-i18n="vb.desc2">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>F1</td><td>01 Sep 2017</td><td>01 Sep 2017</td><td data-i18n="vb.f1.desc">Unmarried adult children of U.S. citizens</td></tr>
+                <tr><td>F2A</td><td>01 Aug 2024</td><td>01 Aug 2024</td><td data-i18n="vb.f2a.desc">Spouses/minor children of permanent residents</td></tr>
+                <tr><td>F2B</td><td>22 May 2017</td><td>22 May 2017</td><td data-i18n="vb.f2b.desc">Unmarried adult children of permanent residents</td></tr>
+                <tr><td>F3</td><td>15 Feb 2012</td><td>15 Feb 2012</td><td data-i18n="vb.f3.desc">Married adult children of U.S. citizens</td></tr>
+                <tr><td>F4</td><td>15 Sep 2008</td><td>15 Sep 2008</td><td data-i18n="vb.f4.desc">Siblings of adult U.S. citizens</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <a href="https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2026/visa-bulletin-for-may-2026.html" target="_blank" rel="noopener" class="bulletin__source">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="vb.source">View official bulletin on travel.state.gov</span>
+        </a>
+      </div>
+
+      <!-- BREAKING NEWS -->
+      <div class="news" data-animate="fade-up">
+        <h3 class="news__heading"><i class="fa-solid fa-bolt"></i> <span data-i18n="news.title">Breaking Immigration News</span></h3>
+        <div class="news__grid">
+
+          <article class="news__card" data-animate="fade-up" data-delay="0">
+            <div class="news__card-tag news__card-tag--alert"><i class="fa-solid fa-triangle-exclamation"></i> <span data-i18n="news.n1.tag">Processing Delay</span></div>
+            <h4 data-i18n="news.n1.title">USCIS Re-Running Fingerprints on All Pending Cases — Expect Delays</h4>
+            <p data-i18n="news.n1.desc">USCIS is re-running fingerprint checks on virtually all pending immigration applications filed before April 27, 2026, using upgraded FBI matching algorithms. Adjustment-of-status processing times are extending from 2–3 months to 4–6 months. The backlog is expected to clear within 90 days.</p>
+            <div class="news__card-meta">
+              <span><i class="fa-regular fa-calendar"></i> May 5, 2026</span>
+              <a href="https://www.visahq.com/news/2026-05-05/us/uscis-begins-re-running-fingerprints-on-all-pending-immigration-cases-slowing-adjudications/" target="_blank" rel="noopener">Source: VisaHQ <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="news__card" data-animate="fade-up" data-delay="100">
+            <div class="news__card-tag news__card-tag--warning"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="news.n2.tag">Student Visa Alert</span></div>
+            <h4 data-i18n="news.n2.title">U.S. Moves to End "Duration of Status" for F, J, and I Visas</h4>
+            <p data-i18n="news.n2.desc">DHS is proposing to eliminate "duration of status" for F, J, and I visa holders, replacing it with fixed admission periods of four years or less. If finalized, this could limit how long international students can study in the U.S., potentially effective September 2026.</p>
+            <div class="news__card-meta">
+              <span><i class="fa-regular fa-calendar"></i> May 2, 2026</span>
+              <a href="https://monitor.icef.com/2026/05/us-moves-to-end-duration-of-status-for-f-j-and-i-visas-new-rule-could-limit-the-time-international-students-can-study-in-the-us/" target="_blank" rel="noopener">Source: ICEF Monitor <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="news__card" data-animate="fade-up" data-delay="200">
+            <div class="news__card-tag news__card-tag--info"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="news.n3.tag">Vetting Update</span></div>
+            <h4 data-i18n="news.n3.title">Operation PARRIS — Enhanced Security Vetting Formalized, Some Holds Lifted</h4>
+            <p data-i18n="news.n3.desc">USCIS formalized "Operation PARRIS," synchronizing biometric, social-media, and financial-network checks across DHS and FBI. Processing holds have been lifted for U.S. citizen-filed petitions, intercountry adoptions, and licensed medical doctors. EAD validity reduced to one year in many cases.</p>
+            <div class="news__card-meta">
+              <span><i class="fa-regular fa-calendar"></i> May 3, 2026</span>
+              <a href="https://www.visahq.com/news/2026-05-03/us/uscis-formalizes-expanded-security-vetting-plan-and-lifts-processing-holds-for-key-applicant-groups/" target="_blank" rel="noopener">Source: VisaHQ <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BANNER ═══ -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner" data-animate="fade-up">
+        <h2 data-i18n="cta.title">Ready to Start Your Journey?</h2>
+        <p data-i18n="cta.desc">Book a free consultation today. No commitment, no pressure — just expert advice on your next big move.</p>
+        <a href="#contact" class="btn btn--primary btn--lg" data-i18n="cta.btn">Book Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info" data-animate="fade-right">
+          <p class="section-tag" data-i18n="contact.tag">Get In Touch</p>
+          <h2 class="section-title" data-i18n="contact.title">Let's Plan Your<br><em>Next Chapter</em></h2>
+          <p class="contact__text" data-i18n="contact.desc">Have questions? Ready to get started? Reach out and we'll get back to you within 24 hours.</p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <div class="contact__detail-icon"><i class="fa-solid fa-phone"></i></div>
+              <div><strong data-i18n="contact.phone">Call Us</strong><p><a href="tel:+14697932036">(469) 793-2036</a></p></div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div><strong>Email</strong><p><a href="mailto:futuresteps.dallas@gmail.com">futuresteps.dallas@gmail.com</a></p></div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div><strong data-i18n="contact.office">Office</strong><p>5017 Southampton Blvd, Garland, TX 75043</p></div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon"><i class="fa-solid fa-clock"></i></div>
+              <div><strong data-i18n="contact.hours">Hours</strong><p data-i18n="contact.hours.val">7:00 AM – 12:00 PM (Vietnam Time, GMT+7)</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__form-wrap" data-animate="fade-left">
+          <form class="contact__form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+            <h3 data-i18n="form.heading">Send Us a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" data-i18n="form.name">Full Name</label>
+                <input type="text" id="name" name="name" data-i18n-ph="form.name.ph" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone" data-i18n="form.phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(469) 000-0000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" data-i18n-ph="form.email.ph" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="service" data-i18n="form.service">Service Interested In</label>
+              <select id="service" name="service">
+                <option value="" data-i18n="form.service.ph">Select a service...</option>
+                <option value="visa" data-i18n="form.service.visa">Visa Consulting</option>
+                <option value="study" data-i18n="form.service.study">Study Abroad</option>
+                <option value="travel" data-i18n="form.service.travel">Travel Planning</option>
+                <option value="other" data-i18n="form.service.other">Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="form.message">Message <span class="word-limit" id="wordCount">(0 / 350 words)</span></label>
+              <textarea id="message" name="message" rows="6" data-i18n-ph="form.message.ph" placeholder="Tell us about your plans or questions..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" data-i18n="form.submit">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p class="form-note" data-i18n="form.note">We'll respond within 24 hours. Your information is kept confidential.</p>
+          </form>
+          <div class="contact__success" id="formSuccess" hidden>
+            <i class="fa-solid fa-circle-check"></i>
+            <h3 data-i18n="form.success.title">Message Sent!</h3>
+            <p data-i18n="form.success.desc">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+            <button class="btn btn--primary" id="sendAnother" style="margin-top:1.5rem" data-i18n="form.success.another">
+              Send Another Message <i class="fa-solid fa-rotate-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <svg class="nav__logo-svg" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="42" height="42" rx="12" fill="url(#logoGrad2)"/>
+              <path d="M13 28C13 28 15.5 22 21 22C26.5 22 29 28 29 28" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M10 24C10 24 13.5 16 21 16C28.5 16 32 24 32 24" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity=".6"/>
+              <path d="M7 20C7 20 12 10 21 10C30 10 35 20 35 20" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity=".3"/>
+              <circle cx="21" cy="28" r="2.5" fill="white"/>
+              <circle cx="14" cy="17" r="1.8" fill="white" opacity=".7"/>
+              <circle cx="28" cy="17" r="1.8" fill="white" opacity=".7"/>
+              <defs><linearGradient id="logoGrad2" x1="0" y1="0" x2="42" y2="42"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0891b2"/></linearGradient></defs>
+            </svg>
+            <span class="nav__logo-text">Future<strong>Steps</strong></span>
+          </a>
+          <p data-i18n="footer.desc">FutureSteps Services — Expert travel, visa, and study abroad advisory. Your trusted partner for international journeys.</p>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.services">Services</h4>
+          <ul>
+            <li><a href="#services" data-i18n="svc.visa.title">Visa Consulting</a></li>
+            <li><a href="#services" data-i18n="svc.study.title">Study Abroad</a></li>
+            <li><a href="#services" data-i18n="svc.travel.title">Travel Planning</a></li>
+            <li><a href="#contact" data-i18n="nav.cta">Free Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.company">Company</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav.about">About Us</a></li>
+            <li><a href="#process" data-i18n="nav.process">How It Works</a></li>
+            <li><a href="#updates" data-i18n="nav.reviews">Updates</a></li>
+            <li><a href="#contact" data-i18n="footer.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.contactinfo">Contact Info</h4>
+          <ul>
+            <li><a href="tel:+14697932036"><i class="fa-solid fa-phone" style="width:16px;margin-right:.4rem;font-size:.8rem;color:var(--clr-primary)"></i> (469) 793-2036</a></li>
+            <li><a href="mailto:futuresteps.dallas@gmail.com"><i class="fa-solid fa-envelope" style="width:16px;margin-right:.4rem;font-size:.8rem;color:var(--clr-primary)"></i> futuresteps.dallas@gmail.com</a></li>
+            <li><span style="display:flex;align-items:flex-start;gap:.4rem"><i class="fa-solid fa-location-dot" style="width:16px;margin-top:.15rem;font-size:.8rem;color:var(--clr-primary)"></i> 5017 Southampton Blvd, Garland, TX 75043</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 FutureSteps Services LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
