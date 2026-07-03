@@ -1233,7 +1233,23 @@ ul { list-style: none; }
   .gallery__item--wide { grid-column: span 1; }
 }
 @media (max-width: 480px) {
-  .gallery__grid { grid-template-columns: 1fr; }
+  .gallery__grid {
+    display: flex;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;             /* Firefox */
+    -ms-overflow-style: none;          /* IE/Edge */
+  }
+  .gallery__grid::-webkit-scrollbar { display: none; }  /* Chrome/Safari */
+  .gallery__item,
+  .gallery__item--wide {
+    flex: 0 0 80%;
+    grid-column: auto;
+    scroll-snap-align: center;
+  }
 }
 
 
