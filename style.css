@@ -1466,6 +1466,7 @@ ul { list-style: none; }
     margin: 0 -1.5rem 1.75rem;
     padding: 0 1.5rem .5rem;
     scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   .gallery__grid::-webkit-scrollbar { display: none; }
   .gallery__item,
