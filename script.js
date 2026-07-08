@@ -16,6 +16,9 @@ const translations = {
     "hero.subtitle": "Chuyên gia hàng đầu về visa, du học và du lịch quốc tế tại Dallas, TX. Chúng tôi đồng hành cùng bạn từ hồ sơ đến ngày khởi hành — nhanh chóng, chính xác và tận tâm.",
     "hero.btn1": 'Tư Vấn Miễn Phí Ngay <i class="fa-solid fa-arrow-right"></i>',
     "hero.btn2": "Xem Dịch Vụ",
+    "hero.badge1": "LLC Có Giấy Phép & Bảo Hiểm",
+    "hero.badge2": "Tư Vấn Tiếng Việt & English",
+    "hero.badge3": "Dallas–Fort Worth, TX",
     "svc.tag": "Giải Pháp Toàn Diện",
     "svc.title": 'Dịch Vụ Thiết Kế Riêng<br>Cho <em>Mục Tiêu Của Bạn</em>',
     "svc.desc": "Mỗi khách hàng có một câu chuyện khác nhau. Dù bạn cần xin visa, du học hay lên kế hoạch chuyến đi, chúng tôi đều có giải pháp phù hợp nhất.",
@@ -43,6 +46,7 @@ const translations = {
     "gal.title": 'Khám Phá Nơi Chúng Tôi<br><em>Đưa Bạn Đến</em>',
     "gal.desc": "Từ các trường đại học danh tiếng hàng đầu Hoa Kỳ đến những vùng đất tuyệt đẹp — cơ hội đang chờ bạn.",
     "gal.schools": "Trường Đại Học & Phổ Thông Uy Tín",
+    "gal.swipe": "← Vuốt ngang",
     "gal.cc": "Cao Đẳng Cộng Đồng<small>Học Phí Hợp Lý — Cơ Hội Chuyển Tiếp</small>",
     "gal.hs": "Trường Phổ Thông<small>Chương Trình Trao Đổi Quốc Tế K-12</small>",
     "gal.dc": "Dallas College<small>Dallas, TX — Cao Đẳng Cộng Đồng Uy Tín</small>",
@@ -98,6 +102,8 @@ const translations = {
     "about.title": 'Đồng Hành Cùng Bạn<br>Trên Mọi <em>Hành Trình</em>',
     "about.p1": "FutureSteps Services ra đời với sứ mệnh rõ ràng: giúp gia đình Việt Nam tiếp cận giáo dục quốc tế, cơ hội việc làm và trải nghiệm du lịch một cách dễ dàng và an tâm nhất. Chúng tôi thấu hiểu những lo lắng khi làm hồ sơ visa, chọn trường cho con hay lên kế hoạch chuyến đi quan trọng.",
     "about.p2": "Là công ty LLC có giấy phép tại Texas, chúng tôi tự hào mang đến dịch vụ tư vấn 1-1 tận tâm — điều mà các công ty lớn không thể có được. Chúng tôi sẵn sàng gặp bạn tại văn phòng, nhà riêng, hoặc bất cứ đâu thuận tiện cho bạn.",
+    "about.story": "Tôi đến Mỹ với tư cách một du học sinh và đã tự mình trải qua mọi cột mốc quan trọng — từ xin I-20, chuyển trường, hoàn thành bằng thạc sĩ, trải qua OPT, STEM OPT và CPT, đến được bảo lãnh diện EB-2 và cuối cùng là nhận thẻ xanh.",
+    "about.story.by": "— Người Sáng Lập, FutureSteps",
     "about.f1.title": "Tư Vấn Tận Tâm",
     "about.f1.desc": "Mỗi khách hàng được tư vấn riêng, phù hợp hoàn cảnh và mục tiêu cụ thể",
     "about.f2.title": "Linh Hoạt & Tiện Lợi",
@@ -140,6 +146,11 @@ const translations = {
     "form.message.ph": "Vui lòng mô tả nhu cầu của bạn — chúng tôi sẽ liên hệ tư vấn chi tiết...",
     "form.submit": 'Gửi Yêu Cầu <i class="fa-solid fa-paper-plane"></i>',
     "form.note": "Chúng tôi cam kết phản hồi trong 24 giờ. Mọi thông tin được bảo mật tuyệt đối.",
+    "prep.title": "Chuẩn bị cho buổi phỏng vấn visa? 🎤",
+    "prep.desc": "Luyện tập các câu hỏi phỏng vấn thực tế với công cụ miễn phí của chúng tôi — mọi lúc, theo nhịp độ của riêng bạn. Tự tin bước vào phòng phỏng vấn!",
+    "prep.btn": 'Luyện Tập Cùng Chúng Tôi <i class="fa-solid fa-arrow-right"></i>',
+    "form.success.prep": "🎤 Trong lúc chờ phản hồi — hãy chuẩn bị cho buổi phỏng vấn visa! Luyện tập câu hỏi thực tế với công cụ miễn phí của chúng tôi.",
+    "form.success.prepbtn": 'Luyện Tập Ngay <i class="fa-solid fa-arrow-up-right-from-square"></i>',
     "form.success.title": "Gửi Thành Công!",
     "form.success.desc": "Cảm ơn bạn đã tin tưởng FutureSteps. Chúng tôi sẽ liên hệ lại trong vòng 24 giờ để tư vấn chi tiết.",
     "form.success.another": 'Gửi Yêu Cầu Khác <i class="fa-solid fa-rotate-right"></i>',
@@ -200,10 +211,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ── Word count for message textarea ── */
   const msgTextarea = document.getElementById("message");
-  const wordCountEl = document.getElementById("wordCount");
   const WORD_LIMIT = 350;
 
   window.updateWordCount = function() {
+    /* Re-query each time: switching language replaces the label's
+       innerHTML, which recreates the #wordCount span */
+    const wordCountEl = document.getElementById("wordCount");
     if (!msgTextarea || !wordCountEl) return;
     const text = msgTextarea.value.trim();
     const count = text === "" ? 0 : text.split(/\s+/).length;
@@ -313,7 +326,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const btn = form.querySelector("button[type='submit']");
     const originalHTML = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ' + (currentLang === "vi" ? "Đang gửi…" : "Sending…");
     btn.disabled = true;
 
     const formData = new FormData(form);

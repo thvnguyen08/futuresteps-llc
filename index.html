@@ -53,6 +53,53 @@
       <div class="hero__gradient"></div>
     </div>
     <div class="hero__content">
+      <div class="hero__flag" data-animate="fade-up" aria-hidden="true">
+        <svg viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="flagRed" x1="0" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#ef4444"/><stop offset="1" stop-color="#b91c1c"/>
+            </linearGradient>
+            <linearGradient id="flagBlue" x1="8" y1="20" x2="115" y2="90" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#2563eb"/><stop offset="1" stop-color="#312e81"/>
+            </linearGradient>
+            <linearGradient id="flagSweep" x1="0" y1="0" x2="60" y2="0" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#fff" stop-opacity="0"/>
+              <stop offset=".5" stop-color="#fff" stop-opacity=".45"/>
+              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <clipPath id="flagClip">
+              <path d="M8,28 C70,8 130,40 190,22 C215,15 240,20 252,16 L252,120 C240,124 215,119 190,126 C130,144 70,112 8,132 Z"/>
+            </clipPath>
+          </defs>
+          <!-- white field -->
+          <path d="M8,28 C70,8 130,40 190,22 C215,15 240,20 252,16 L252,120 C240,124 215,119 190,126 C130,144 70,112 8,132 Z" fill="#eef4ff" fill-opacity=".96"/>
+          <!-- red stripes following the wave -->
+          <g fill="url(#flagRed)">
+            <path d="M8,28 C70,8 130,40 190,22 C215,15 240,20 252,16 L252,24 C240,28 215,23 190,30 C130,48 70,16 8,36 Z"/>
+            <path d="M8,44 C70,24 130,56 190,38 C215,31 240,36 252,32 L252,40 C240,44 215,39 190,46 C130,64 70,32 8,52 Z"/>
+            <path d="M8,60 C70,40 130,72 190,54 C215,47 240,52 252,48 L252,56 C240,60 215,55 190,62 C130,80 70,48 8,68 Z"/>
+            <path d="M8,76 C70,56 130,88 190,70 C215,63 240,68 252,64 L252,72 C240,76 215,71 190,78 C130,96 70,64 8,84 Z"/>
+            <path d="M8,92 C70,72 130,104 190,86 C215,79 240,84 252,80 L252,88 C240,92 215,87 190,94 C130,112 70,80 8,100 Z"/>
+            <path d="M8,108 C70,88 130,120 190,102 C215,95 240,100 252,96 L252,104 C240,108 215,103 190,110 C130,128 70,96 8,116 Z"/>
+            <path d="M8,124 C70,104 130,136 190,118 C215,111 240,116 252,112 L252,120 C240,124 215,119 190,126 C130,144 70,112 8,132 Z"/>
+          </g>
+          <!-- canton with stars -->
+          <path d="M8,28 C50,15 80,30 112,26 L112,82 C80,86 50,71 8,84 Z" fill="url(#flagBlue)"/>
+          <g fill="#fff">
+            <circle cx="24" cy="38" r="3"/><circle cx="44" cy="36" r="3"/><circle cx="64" cy="38" r="3"/><circle cx="84" cy="38" r="3"/><circle cx="100" cy="36" r="3"/>
+            <circle cx="34" cy="52" r="3" opacity=".9"/><circle cx="54" cy="51" r="3" opacity=".9"/><circle cx="74" cy="52" r="3" opacity=".9"/><circle cx="93" cy="51" r="3" opacity=".9"/>
+            <circle cx="24" cy="66" r="3" opacity=".8"/><circle cx="44" cy="65" r="3" opacity=".8"/><circle cx="64" cy="66" r="3" opacity=".8"/><circle cx="84" cy="66" r="3" opacity=".8"/><circle cx="100" cy="64" r="3" opacity=".8"/>
+          </g>
+          <!-- animated light sweep -->
+          <g clip-path="url(#flagClip)">
+            <rect x="-70" y="0" width="60" height="160" fill="url(#flagSweep)" transform="skewX(-12)">
+              <animate attributeName="x" from="-70" to="320" dur="3.2s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+          <!-- outline -->
+          <path d="M8,28 C70,8 130,40 190,22 C215,15 240,20 252,16 L252,120 C240,124 215,119 190,126 C130,144 70,112 8,132 Z" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+        </svg>
+      </div>
       <p class="hero__tag" data-animate="fade-up" data-i18n="hero.tag">Travel &bull; Visa &bull; Study Abroad</p>
       <h1 class="hero__title" data-animate="fade-up" data-delay="100" data-i18n="hero.title">
         Your Journey<br>Starts <em>Here</em>
@@ -64,9 +111,14 @@
         <a href="#contact" class="btn btn--primary" data-i18n="hero.btn1">Get Started <i class="fa-solid fa-arrow-right"></i></a>
         <a href="#services" class="btn btn--outline" data-i18n="hero.btn2">Our Services</a>
       </div>
+      <ul class="hero__badges" data-animate="fade-up" data-delay="400">
+        <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="hero.badge1">Licensed &amp; Insured LLC</span></li>
+        <li><i class="fa-solid fa-language"></i> <span data-i18n="hero.badge2">Tiếng Việt &amp; English</span></li>
+        <li><i class="fa-solid fa-location-dot"></i> <span data-i18n="hero.badge3">Dallas–Fort Worth, TX</span></li>
+      </ul>
     </div>
     <div class="hero__scroll">
-      <a href="#services"><i class="fa-solid fa-chevron-down"></i></a>
+      <a href="#services" aria-label="Scroll to services"><i class="fa-solid fa-chevron-down"></i></a>
     </div>
   </header>
 
@@ -126,7 +178,7 @@
         <h2 class="section-title" data-i18n="gal.title">Where We Can <em>Take You</em></h2>
         <p class="section-desc" data-i18n="gal.desc">From top US universities to breathtaking travel destinations — explore the possibilities.</p>
       </div>
-      <h3 class="gallery__category" data-animate="fade-up"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="gal.schools">Universities & Schools</span></h3>
+      <h3 class="gallery__category" data-animate="fade-up"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="gal.schools">Universities & Schools</span> <em class="gallery__swipe" data-i18n="gal.swipe">← Swipe</em></h3>
       <div class="gallery__grid">
         <div class="gallery__item gallery__item--wide" data-animate="fade-up" data-delay="0"><img src="https://images.unsplash.com/photo-1568792923760-d70635a89fdc?w=800&h=500&fit=crop" alt="Harvard University" loading="lazy"><div class="gallery__overlay"><span>Harvard University<small>Cambridge, MA</small></span></div></div>
         <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=500&h=400&fit=crop" alt="UCLA Campus" loading="lazy"><div class="gallery__overlay"><span>UCLA<small>Los Angeles, CA</small></span></div></div>
@@ -139,7 +191,7 @@
         <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=500&h=400&fit=crop" alt="Stanford University" loading="lazy"><div class="gallery__overlay"><span>Stanford University<small>Stanford, CA</small></span></div></div>
         <div class="gallery__item" data-animate="fade-up" data-delay="100"><img src="https://images.unsplash.com/photo-1559135197-8a45ea74d367?w=500&h=400&fit=crop" alt="Dallas College" loading="lazy"><div class="gallery__overlay"><span data-i18n="gal.dc">Dallas College<small>Dallas, TX — Community College</small></span></div></div>
       </div>
-      <h3 class="gallery__category" data-animate="fade-up"><i class="fa-solid fa-mountain-sun"></i> <span data-i18n="gal.travel">Travel Destinations</span></h3>
+      <h3 class="gallery__category" data-animate="fade-up"><i class="fa-solid fa-mountain-sun"></i> <span data-i18n="gal.travel">Travel Destinations</span> <em class="gallery__swipe" data-i18n="gal.swipe">← Swipe</em></h3>
       <div class="gallery__grid">
         <div class="gallery__item" data-animate="fade-up" data-delay="0"><img src="https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=500&h=400&fit=crop" alt="Grand Canyon" loading="lazy"><div class="gallery__overlay"><span>Grand Canyon<small>Arizona</small></span></div></div>
         <div class="gallery__item" data-animate="fade-up" data-delay="50"><img src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=500&h=400&fit=crop" alt="Antelope Canyon" loading="lazy"><div class="gallery__overlay"><span>Antelope Canyon<small>Arizona</small></span></div></div>
@@ -165,7 +217,7 @@
         <div class="about__visual" data-animate="fade-right">
           <div class="about__image-stack">
             <div class="about__img about__img--1"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop" alt="Travel planning" loading="lazy"></div>
-            <div class="about__img about__img--2"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop" alt="Study abroad students" loading="lazy"></div>
+            <div class="about__img about__img--2"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=300&fit=crop" alt="Study abroad students at graduation" loading="lazy"></div>
             <div class="about__float-card"><i class="fa-solid fa-shield-halved"></i><span data-i18n="about.badge">Licensed &<br>Insured LLC</span></div>
           </div>
         </div>
@@ -174,6 +226,10 @@
           <h2 class="section-title" data-i18n="about.title">Guiding Dreams<br>Across <em>Borders</em></h2>
           <p class="about__text" data-i18n="about.p1">FutureSteps Services was founded with a simple mission: make international travel, education, and immigration accessible to everyone. We understand the stress of navigating visa requirements, choosing the right university abroad, or planning a complex international trip.</p>
           <p class="about__text" data-i18n="about.p2">As a locally-owned LLC, we offer personalized, one-on-one service that big agencies can't match. We meet you where you are — whether that's at our office, your home, or your favorite coffee shop.</p>
+          <blockquote class="about__story" data-animate="fade-up">
+            <p data-i18n="about.story">I came to the United States as an international student and personally navigated every major milestone — from obtaining my I-20, transferring schools, completing my master's degree, and going through OPT, STEM OPT, and CPT, to EB-2 sponsorship and finally receiving my green card.</p>
+            <footer data-i18n="about.story.by">— Founder, FutureSteps</footer>
+          </blockquote>
           <div class="about__features">
             <div class="about__feature"><div class="about__feature-icon"><i class="fa-solid fa-handshake"></i></div><div><h4 data-i18n="about.f1.title">Personal Touch</h4><p data-i18n="about.f1.desc">One-on-one consultations tailored to your unique situation</p></div></div>
             <div class="about__feature"><div class="about__feature-icon"><i class="fa-solid fa-car"></i></div><div><h4 data-i18n="about.f2.title">We Come to You</h4><p data-i18n="about.f2.desc">In-person meetings at your convenience — home, office, or campus</p></div></div>
@@ -344,6 +400,15 @@
               <div><strong data-i18n="contact.hours">Hours</strong><p data-i18n="contact.hours.val">7:00 AM – 12:00 PM (Vietnam Time, GMT+7)</p></div>
             </div>
           </div>
+
+          <div class="prep-card" data-animate="fade-up">
+            <div class="prep-card__icon"><i class="fa-solid fa-microphone-lines"></i></div>
+            <div class="prep-card__body">
+              <h4 data-i18n="prep.title">Getting ready for your visa interview? 🎤</h4>
+              <p data-i18n="prep.desc">Practice real interview questions with our free tool — anytime, at your own pace. Walk in confident!</p>
+              <a href="https://futuresteps-interview-prep.netlify.app/" target="_blank" rel="noopener" class="prep-card__link" data-i18n="prep.btn">Practice with us <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
 
         <div class="contact__form-wrap" data-animate="fade-left">
@@ -388,7 +453,13 @@
             <i class="fa-solid fa-circle-check"></i>
             <h3 data-i18n="form.success.title">Message Sent!</h3>
             <p data-i18n="form.success.desc">Thank you for reaching out. We'll get back to you within 24 hours.</p>
-            <button class="btn btn--primary" id="sendAnother" style="margin-top:1.5rem" data-i18n="form.success.another">
+            <div class="contact__success-prep">
+              <p data-i18n="form.success.prep">🎤 While you wait — get ready for your visa interview! Practice real questions with our free tool.</p>
+              <a href="https://futuresteps-interview-prep.netlify.app/" target="_blank" rel="noopener" class="btn btn--primary" data-i18n="form.success.prepbtn">
+                Practice With Us <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+            <button class="btn btn--outline" id="sendAnother" data-i18n="form.success.another">
               Send Another Message <i class="fa-solid fa-rotate-right"></i>
             </button>
           </div>
