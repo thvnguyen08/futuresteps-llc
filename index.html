@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FutureSteps Services — Travel, Visa & Study Abroad</title>
   <meta name="description" content="FutureSteps Services — Expert visa consulting, travel planning, and study abroad advisory. We guide you every step of the way to your international journey.">
+  <meta name="theme-color" content="#1b8f5a">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -17,15 +19,14 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#" class="nav__logo">
-        <svg class="nav__logo-svg" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="42" height="42" rx="12" fill="url(#logoGrad)"/>
-          <path d="M13 28C13 28 15.5 22 21 22C26.5 22 29 28 29 28" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
-          <path d="M10 24C10 24 13.5 16 21 16C28.5 16 32 24 32 24" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity=".6"/>
-          <path d="M7 20C7 20 12 10 21 10C30 10 35 20 35 20" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity=".3"/>
-          <circle cx="21" cy="28" r="2.5" fill="white"/>
-          <circle cx="14" cy="17" r="1.8" fill="white" opacity=".7"/>
-          <circle cx="28" cy="17" r="1.8" fill="white" opacity=".7"/>
-          <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="42" y2="42"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0891b2"/></linearGradient></defs>
+        <svg class="nav__logo-svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="FutureSteps">
+          <rect width="48" height="48" rx="13" fill="url(#logoGrad)"/>
+          <circle cx="24" cy="26" r="12.5" stroke="#fff" stroke-width="2.4" fill="none" opacity=".55"/>
+          <path d="M24 26 L17.5 33.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+          <path d="M24 26 L35 12" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M35 12 L28.7 13 M35 12 L34 18.3" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="24" cy="26" r="2.4" fill="#fff"/>
+          <defs><linearGradient id="logoGrad" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#2bb673"/><stop offset="1" stop-color="#156943"/></linearGradient></defs>
         </svg>
         <span class="nav__logo-text">Future<strong>Steps</strong></span>
       </a>
@@ -57,48 +58,38 @@
       <div class="hero__flag" data-animate="fade-up" aria-hidden="true">
         <svg viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="flagRed" x1="0" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#ef4444"/><stop offset="1" stop-color="#b91c1c"/>
+            <linearGradient id="heroDisc" x1="64" y1="18" x2="196" y2="146" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#2bb673"/><stop offset="1" stop-color="#156943"/>
             </linearGradient>
-            <linearGradient id="flagBlue" x1="8" y1="20" x2="115" y2="90" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#2563eb"/><stop offset="1" stop-color="#312e81"/>
-            </linearGradient>
-            <linearGradient id="flagSweep" x1="0" y1="0" x2="60" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient id="heroSweep" x1="0" y1="0" x2="60" y2="0" gradientUnits="userSpaceOnUse">
               <stop stop-color="#fff" stop-opacity="0"/>
-              <stop offset=".5" stop-color="#fff" stop-opacity=".45"/>
+              <stop offset=".5" stop-color="#fff" stop-opacity=".4"/>
               <stop offset="1" stop-color="#fff" stop-opacity="0"/>
             </linearGradient>
-            <clipPath id="flagClip">
-              <path d="M8,28 C70,8 130,40 190,22 C215,15 240,20 252,16 L252,120 C240,124 215,119 190,126 C130,144 70,112 8,132 Z"/>
-            </clipPath>
+            <clipPath id="heroClip"><circle cx="130" cy="80" r="66"/></clipPath>
           </defs>
-          <!-- white field -->
-          <path d="M8,28 C70,8 130,40 190,22 C215,15 240,20 252,16 L252,120 C240,124 215,119 190,126 C130,144 70,112 8,132 Z" fill="#eef4ff" fill-opacity=".96"/>
-          <!-- red stripes following the wave -->
-          <g fill="url(#flagRed)">
-            <path d="M8,28 C70,8 130,40 190,22 C215,15 240,20 252,16 L252,24 C240,28 215,23 190,30 C130,48 70,16 8,36 Z"/>
-            <path d="M8,44 C70,24 130,56 190,38 C215,31 240,36 252,32 L252,40 C240,44 215,39 190,46 C130,64 70,32 8,52 Z"/>
-            <path d="M8,60 C70,40 130,72 190,54 C215,47 240,52 252,48 L252,56 C240,60 215,55 190,62 C130,80 70,48 8,68 Z"/>
-            <path d="M8,76 C70,56 130,88 190,70 C215,63 240,68 252,64 L252,72 C240,76 215,71 190,78 C130,96 70,64 8,84 Z"/>
-            <path d="M8,92 C70,72 130,104 190,86 C215,79 240,84 252,80 L252,88 C240,92 215,87 190,94 C130,112 70,80 8,100 Z"/>
-            <path d="M8,108 C70,88 130,120 190,102 C215,95 240,100 252,96 L252,104 C240,108 215,103 190,110 C130,128 70,96 8,116 Z"/>
-            <path d="M8,124 C70,104 130,136 190,118 C215,111 240,116 252,112 L252,120 C240,124 215,119 190,126 C130,144 70,112 8,132 Z"/>
+          <circle cx="130" cy="80" r="66" fill="url(#heroDisc)"/>
+          <circle cx="130" cy="80" r="66" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="1.5"/>
+          <circle cx="130" cy="80" r="56" fill="none" stroke="#fff" stroke-opacity=".32" stroke-width="1.5"/>
+          <g stroke="#fff" stroke-linecap="round">
+            <path d="M130 18 L130 28" stroke-opacity=".7" stroke-width="2"/>
+            <path d="M192 80 L182 80" stroke-opacity=".7" stroke-width="2"/>
+            <path d="M130 142 L130 132" stroke-opacity=".7" stroke-width="2"/>
+            <path d="M68 80 L78 80" stroke-opacity=".7" stroke-width="2"/>
+            <path d="M173.8 36.2 L169.6 40.4" stroke-opacity=".45" stroke-width="1.5"/>
+            <path d="M173.8 123.8 L169.6 119.6" stroke-opacity=".45" stroke-width="1.5"/>
+            <path d="M86.2 123.8 L90.4 119.6" stroke-opacity=".45" stroke-width="1.5"/>
+            <path d="M86.2 36.2 L90.4 40.4" stroke-opacity=".45" stroke-width="1.5"/>
           </g>
-          <!-- canton with stars -->
-          <path d="M8,28 C50,15 80,30 112,26 L112,82 C80,86 50,71 8,84 Z" fill="url(#flagBlue)"/>
-          <g fill="#fff">
-            <circle cx="24" cy="38" r="3"/><circle cx="44" cy="36" r="3"/><circle cx="64" cy="38" r="3"/><circle cx="84" cy="38" r="3"/><circle cx="100" cy="36" r="3"/>
-            <circle cx="34" cy="52" r="3" opacity=".9"/><circle cx="54" cy="51" r="3" opacity=".9"/><circle cx="74" cy="52" r="3" opacity=".9"/><circle cx="93" cy="51" r="3" opacity=".9"/>
-            <circle cx="24" cy="66" r="3" opacity=".8"/><circle cx="44" cy="65" r="3" opacity=".8"/><circle cx="64" cy="66" r="3" opacity=".8"/><circle cx="84" cy="66" r="3" opacity=".8"/><circle cx="100" cy="64" r="3" opacity=".8"/>
-          </g>
-          <!-- animated light sweep -->
-          <g clip-path="url(#flagClip)">
-            <rect x="-70" y="0" width="60" height="160" fill="url(#flagSweep)" transform="skewX(-12)">
-              <animate attributeName="x" from="-70" to="320" dur="3.2s" repeatCount="indefinite"/>
+          <path d="M130 80 L107 108" stroke="#fff" stroke-opacity=".5" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M130 80 L163 43" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M163 43 L143 45 M163 43 L161 63" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="130" cy="80" r="6" fill="#fff"/>
+          <g clip-path="url(#heroClip)">
+            <rect x="-70" y="0" width="60" height="160" fill="url(#heroSweep)" transform="skewX(-12)">
+              <animate attributeName="x" from="-70" to="330" dur="3.4s" repeatCount="indefinite"/>
             </rect>
           </g>
-          <!-- outline -->
-          <path d="M8,28 C70,8 130,40 190,22 C215,15 240,20 252,16 L252,120 C240,124 215,119 190,126 C130,144 70,112 8,132 Z" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
         </svg>
       </div>
       <p class="hero__tag" data-animate="fade-up" data-i18n="hero.tag">Travel &bull; Visa &bull; Study Abroad</p>
@@ -487,15 +478,14 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="#" class="nav__logo">
-            <svg class="nav__logo-svg" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="42" height="42" rx="12" fill="url(#logoGrad2)"/>
-              <path d="M13 28C13 28 15.5 22 21 22C26.5 22 29 28 29 28" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
-              <path d="M10 24C10 24 13.5 16 21 16C28.5 16 32 24 32 24" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity=".6"/>
-              <path d="M7 20C7 20 12 10 21 10C30 10 35 20 35 20" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity=".3"/>
-              <circle cx="21" cy="28" r="2.5" fill="white"/>
-              <circle cx="14" cy="17" r="1.8" fill="white" opacity=".7"/>
-              <circle cx="28" cy="17" r="1.8" fill="white" opacity=".7"/>
-              <defs><linearGradient id="logoGrad2" x1="0" y1="0" x2="42" y2="42"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0891b2"/></linearGradient></defs>
+            <svg class="nav__logo-svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="FutureSteps">
+              <rect width="48" height="48" rx="13" fill="url(#logoGrad2)"/>
+              <circle cx="24" cy="26" r="12.5" stroke="#fff" stroke-width="2.4" fill="none" opacity=".55"/>
+              <path d="M24 26 L17.5 33.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+              <path d="M24 26 L35 12" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35 12 L28.7 13 M35 12 L34 18.3" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="26" r="2.4" fill="#fff"/>
+              <defs><linearGradient id="logoGrad2" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#2bb673"/><stop offset="1" stop-color="#156943"/></linearGradient></defs>
             </svg>
             <span class="nav__logo-text">Future<strong>Steps</strong></span>
           </a>
