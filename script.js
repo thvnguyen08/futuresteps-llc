@@ -2,6 +2,34 @@
    FUTURESTEPS SERVICES — MAIN SCRIPT
    ════════════════════════════════════════════════ */
 
+/* ── Cross-site visitor id ──
+   Shared with the interview-prep app so one person's journey can be traced
+   across both properties (see interview-prep/supabase/ANALYTICS.md). Persisted
+   in localStorage on first visit here, then appended to every "Practice Now"
+   link as ?aid=<id> so the app adopts the same id instead of minting its own. */
+const ANON_ID_KEY = "futureStepsAnonId";
+
+function getAnonId() {
+  let id = localStorage.getItem(ANON_ID_KEY);
+  if (!id) {
+    id = (window.crypto && crypto.randomUUID)
+      ? crypto.randomUUID()
+      : "w_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+    try { localStorage.setItem(ANON_ID_KEY, id); } catch (e) {}
+  }
+  return id;
+}
+
+function tagPracticeLinksWithAnonId() {
+  const anonId = getAnonId();
+  document.querySelectorAll('a[href^="https://futuresteps-interview-prep.netlify.app"]')
+    .forEach((link) => {
+      const url = new URL(link.href);
+      url.searchParams.set("aid", anonId);
+      link.href = url.toString();
+    });
+}
+
 /* ── Translations ── */
 const translations = {
   vi: {
@@ -208,6 +236,8 @@ function switchLanguage(lang) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  tagPracticeLinksWithAnonId();
 
   /* ── Language toggle ── */
   document.getElementById("langToggle").addEventListener("click", () => {
